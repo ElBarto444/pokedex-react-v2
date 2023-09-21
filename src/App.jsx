@@ -52,7 +52,11 @@ function App() {
   return (
     <>
       <div>
-        <Navbar increment={increment} decrement={decrement} />
+        <Navbar
+          pokemonList={pokemonList}
+          pokemonIndex={pokemonIndex}
+          setPokemonIndex={setPokemonIndex}
+        />
         <PokemonCard
           pokemon={pokemonList[pokemonIndex] ? pokemonList[pokemonIndex] : ""}
         />
