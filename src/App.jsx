@@ -3,6 +3,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import PokemonCard from "./components/PokemonCard";
 import { useState } from "react";
+import Navbar from "./components/Navbar";
 
 function App() {
   const pokemonList = [
@@ -38,9 +39,8 @@ function App() {
   return (
     <>
       <div>
+        <Navbar increment={increment} decrement={decrement} />
         <PokemonCard pokemon={pokemonList[pokemonIndex] ? pokemonList[pokemonIndex] : "" } />
-        <button onClick={decrement}>Prev</button>
-        <button onClick={increment}>Next</button>
       </div>
     </>
   );
