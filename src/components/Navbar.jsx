@@ -1,8 +1,17 @@
-function Navbar({increment, decrement}) {
+function Navbar({ pokemonList, pokemonIndex, setPokemonIndex }) {
+  function handleClick(index) {
+    return setPokemonIndex(index);
+  }
   return (
     <>
-      <button onClick={decrement}>Prev</button>
-      <button onClick={increment}>Next</button>
+      <h1>Pokemon list</h1>
+      <ul>
+        {pokemonList.map((pokemon, index) => (
+          <button key={index} onClick={() => handleClick(index)}>
+            {pokemon.name}
+          </button>
+        ))}
+      </ul>
     </>
   );
 }
