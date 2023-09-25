@@ -11,15 +11,23 @@ function PokemonCard(props) {
   };
 
   return (
-    <figure>
-      {props.pokemon.imgSrc ? (
-        <img src={props.pokemon.imgSrc} alt={props.pokemon.name} />
-      ) : (
-        <p>???</p>
-      )}
-      <figcaption>
-        <p>{props.pokemon.name}</p>
-      </figcaption>
+    <figure className="card">
+      <div className="cardUpper">
+        {props.pokemon.imgSrc ? (
+          <img
+            className="pokpic"
+            src={props.pokemon.imgSrc}
+            alt={props.pokemon.name}
+          />
+        ) : (
+          <p>???</p>
+        )}
+      </div>
+      <div className="cardLower">
+        <figcaption className="pokname">
+          <p>{props.pokemon.name.toUpperCase()}</p>
+        </figcaption>
+      </div>
     </figure>
   );
 }

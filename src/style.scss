@@ -1,0 +1,29 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4rem;
+  border: solid white;
+  border-radius: 5px;
+  height: 500px;
+}
+
+.cardUpper {
+  background-color: rgb(216, 200, 200);
+  width: 100%;
+  height: 70%;
+}
+
+.cardLower {
+  height: 30%;
+}
+
+.pokpic {
+  width: 200px;
+}
+
+.pokname {
+  font-weight: bolder;
+  font-size: 30pt;
+}
