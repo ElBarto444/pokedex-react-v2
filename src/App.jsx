@@ -4,6 +4,7 @@ import "./App.css";
 import PokemonCard from "./components/PokemonCard";
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
+import './style.scss';
 
 function App() {
   const pokemonList = [
